@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Анастасия & Игорь</title>
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-cover bg-center text-gray-800" style="background-image: url('https://wow-card.ru/images/backgrounds/ramil-i-elvina.jpg');"> 
+  <div class="min-h-screen bg-black bg-opacity-30 backdrop-blur-sm">
+
+    <!-- Hero Section -->
+    <header class="py-16 px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4 text-white animate-fadeIn">Анастасия & Игорь</h1>
+      <p class="text-xl md:text-2xl font-light italic text-white">9 августа 2025</p>
+      <div class="mt-8 w-20 h-1 bg-pink-400 mx-auto"></div>
+    </header>
+
+    <!-- Relatives Section -->
+    <section class="py-12 px-6 bg-white rounded-t-3xl shadow-lg mx-4 md:mx-16 lg:mx-32 -translate-y-6">
+      <h2 class="text-3xl font-serif text-center mb-6">Родные и близкие!</h2>
+      <p class="text-center max-w-2xl mx-auto text-lg leading-relaxed">
+        Мы приглашаем вас вместе с нами открыть новую главу нашей истории.
+      </p>
+      <p class="text-center max-w-2xl mx-auto text-lg leading-relaxed mt-4">
+        Ждём вас на свадебной вечеринке, посвящённой нашему бракосочетанию.
+      </p>
+      <p class="text-center text-2xl font-semibold mt-4 text-pink-600">09 августа 2025 года</p>
+    </section>
+
+    <!-- Day Plan Section -->
+    <section class="py-12 px-6 mt-12">
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-xl">
+        <h2 class="text-2xl font-serif text-center mb-8">План дня</h2>
+        <ul class="space-y-6 text-lg">
+          <li class="flex items-start">
+            <span class="font-semibold text-pink-600 min-w-[70px]">17:00</span>
+            <div><strong>ЦЕРЕМОНИЯ:</strong><br /> Не исключено, что вам потребуются платочки для этого трогательного момента</div>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold text-pink-600 min-w-[70px]">18:30</span>
+            <div><strong>WELCOME:</strong><br /> Не забудьте взять хорошее настроение и улыбки</div>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold text-pink-600 min-w-[70px]">19:00</span>
+            <div><strong>СВАДЕБНЫЙ УЖИН:</strong><br /> Вкусные блюда и весёлая программа от нашего крутого ведущего</div>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold text-pink-600 min-w-[70px]">21:00</span>
+            <div><strong>СВАДЕБНЫЙ ТОРТ:</strong><br /> Обещаем, торт продавать мы не будем</div>
+          </li>
+          <li class="flex items-start">
+            <span class="font-semibold text-pink-600 min-w-[70px]">23:00</span>
+            <div><strong>ОКОНЧАНИЕ ВЕЧЕРА:</strong><br /> Даже такая вечеринка может закончиться, но мы придумаем ещё поводы собраться вместе</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Dress Code Section -->
+    <section class="py-12 px-6 mt-12">
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-xl">
+        <h2 class="text-2xl font-serif text-center mb-8">Дресс-код</h2>
+        <p class="text-center mb-6">Мы будем очень рады, если вы поддержите цветовую гамму нашей свадьбы:</p>
+        <div class="flex justify-center flex-wrap gap-2 mb-6">
+          <div class="w-8 h-8 rounded-full" style="background-color: #006400;"></div>
+          <div class="w-8 h-8 rounded-full" style="background-color: #6B8E23;"></div>
+          <div class="w-8 h-8 rounded-full" style="background-color: #F5DEB3;"></div>
+          <div class="w-8 h-8 rounded-full" style="background-color: #E9967A;"></div>
+          <div class="w-8 h-8 rounded-full" style="background-color: #DEB887;"></div>
+          <div class="w-8 h-8 rounded-full" style="background-color: #8B4513;"></div>
+        </div>
+        <p class="text-center text-sm text-gray-600">Соблюдение дресс-кода желательно, но не обязательно.</p>
+      </div>
+    </section>
+
+    <!-- Guest Form Section -->
+    <section class="py-12 px-6 mt-12">
+      <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-xl">
+        <h2 class="text-2xl font-serif text-center mb-6">Анкета гостя</h2>
+        <p class="text-center text-sm text-gray-600 mb-6">Просим подтвердить своё присутствие на мероприятии до: <strong>09 / 08 / 25</strong></p>
+        
+        <form id="rsvpForm" class="hidden space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1">Имя и Фамилия</label>
+            <input type="text" id="name" required class="w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500" />
+          </div>
+
+          <div>
+            <legend class="block text-sm font-medium mb-2">Планируете ли Вы присутствовать?</legend>
+            <div class="flex flex-col space-y-2">
+              <label class="inline-flex items-center">
+                <input type="radio" name="attendance" value="yes" class="form-radio h-5 w-5 text-pink-600" onchange="togglePartner()" />
+                <span class="ml-2">Да, с удовольствием</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input type="radio" name="attendance" value="no" class="form-radio h-5 w-5 text-pink-600" onchange="togglePartner()" />
+                <span class="ml-2">Не смогу</span>
+              </label>
+            </div>
+          </div>
+
+          <div id="partnerSection" class="pt-4 border-t border-gray-200 hidden">
+            <p class="text-sm text-gray-600 mb-2">Если Вы будете не одни, пожалуйста, заполните поле ниже:</p>
+            <label for="partnerName" class="block text-sm font-medium mb-1">Имя и Фамилия Вашего спутника/спутницы</label>
+            <input type="text" id="partnerName" class="w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500" />
+          </div>
+
+          <div id="drinksSection" class="pt-4 border-t border-gray-200 hidden">
+            <legend class="block text-sm font-medium mb-2">Ваши предпочтения</legend>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="inline-flex items-center"><input type="checkbox" value="Шампанское" class="form-checkbox h-4 w-4 text-pink-600" onchange="updateDrinks(this)"><span class="ml-2">Шампанское</span></label>
+              <label class="inline-flex items-center"><input type="checkbox" value="Белое вино" class="form-checkbox h-4 w-4 text-pink-600" onchange="updateDrinks(this)"><span class="ml-2">Белое вино</span></label>
+              <label class="inline-flex items-center"><input type="checkbox" value="Красное вино" class="form-checkbox h-4 w-4 text-pink-600" onchange="updateDrinks(this)"><span class="ml-2">Красное вино</span></label>
+              <label class="inline-flex items-center"><input type="checkbox" value="Виски" class="form-checkbox h-4 w-4 text-pink-600" onchange="updateDrinks(this)"><span class="ml-2">Виски</span></label>
+              <label class="inline-flex items-center"><input type="checkbox" value="Водка" class="form-checkbox h-4 w-4 text-pink-600" onchange="updateDrinks(this)"><span class="ml-2">Водка</span></label>
+              <label class="inline-flex items-center"><input type="checkbox" value="Джин" class="form-checkbox h-4 w-4 text-pink-600" onchange="updateDrinks(this)"><span class="ml-2">Джин</span></label>
+              <label class="inline-flex items-center"><input type="checkbox" value="Ром" class="form-checkbox h-4 w-4 text-pink-600" onchange="updateDrinks(this)"><span class="ml-2">Ром</span></label>
+              <label class="inline-flex items-center"><input type="checkbox" value="Не пью алкоголь" class="form-checkbox h-4 w-4 text-pink-600" onchange="updateDrinks(this)"><span class="ml-2">Не пью алкоголь</span></label>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full py-3 px-4 bg-pink-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition-colors">Отправить ответ</button>
+        </form>
+
+        <div id="confirmationMessage" class="text-center py-8 hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <p class="text-lg font-medium">Спасибо за ответ! До встречи на нашем празднике</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="py-12 px-6 mt-12">
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-xl">
+        <h2 class="text-2xl font-serif text-center mb-6">Детали</h2>
+        <ul class="space-y-6 text-base text-gray-700 list-disc pl-5">
+          <li><strong>Формат мероприятия:</strong><br />Обратите внимание, что формат мероприятия не предполагает детской площадки и аниматоров. Пожалуйста, позаботьтесь о том, чтобы провести этот вечер без детей.</li>
+          <li><strong>Подарки:</strong><br />Пожалуйста, не дарите нам цветы! Мы не успеем насладиться их красотой и ароматом. Если хотите подарить нам ценный и нужный подарок, мы будем очень благодарны за оформление цветочной подписки для невесты.</li>
+          <li><strong>Атмосфера вечера:</strong><br />Лучшая поддержка для нас – ваши искренние пожелания и лучезарные улыбки, остальное можно поместить в конверт.</li>
+          <li><strong>Telegram-группа:</strong><br />Мы открыли группу в Telegram для всех гостей. Давайте добавлять в нее свадебные видеоролики и фотографии. А позже мы поделимся с вами кадрами со свадьбы, сделанными профессиональными фотографами и видеографами.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Ceremony Location Section -->
+    <section class="py-12 px-6 mt-12">
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-xl">
+        <h2 class="text-2xl font-serif text-center mb-6">Церемония бракосочетания состоится</h2>
+        <p class="text-center text-lg mb-6">Малый Харитоньевский пер., 10, Москва</p>
+        <div class="mb-6 rounded-lg overflow-hidden shadow-md">
+          <img src="bd61e4ac-00b7-4af4-959e-16c75a880702.jpg" alt="Дворец бракосочетания" class="w-full h-auto object-cover" />
+          <p class="text-center text-sm text-gray-500 mt-2">Дворец бракосочетания №4 в Москве</p>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold mb-2 text-center">Как добраться:</h3>
+          <div class="w-full h-64 rounded-lg overflow-hidden shadow-inner">
+            <iframe title="Яндекс.Карта до Дворца бракосочетания №4"
+                    width="100%" height="100%"
+                    frameborder="0"
+                    allowfullscreen=""
+                    src="https://yandex.ru/map-widget/v1/?ll=37.617639%2C55.766324&z=16&mode=search&text=Малый+Харитоньевский+пер.%2C+10%2C+Москва">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-12 px-6 mt-12">
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-xl">
+        <h2 class="text-2xl font-serif text-center mb-6">Локация</h2>
+        <p class="text-center text-lg mb-4">Наша свадьба пройдет в усадьбе Строгановых «Братцево»</p>
+        <p class="text-center text-base text-gray-600 mb-6">Москва, Светлогорский пр-д., 13</p>
+        <div class="mb-6 rounded-lg overflow-hidden shadow-md">
+          <img src="bd61e4ac-00b7-4af4-959e-16c75a880702.jpg" alt="Усадьба Строгановых Братцево" class="w-full h-auto object-cover" />
+          <p class="text-center text-sm text-gray-500 mt-2">Усадьба Строгановых «Братцево»</p>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold mb-2 text-center">Как добраться:</h3>
+          <div class="w-full h-64 rounded-lg overflow-hidden shadow-inner">
+            <iframe title="Яндекс.Карта до усадьбы Братцево"
+                    width="100%" height="100%"
+                    frameborder="0"
+                    allowfullscreen=""
+                    src="https://yandex.ru/map-widget/v1/?ll=37.753495%2C55.749197&z=16&mode=search&text=Москва%2C+Светлогорский+пр-д.%2C+13">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown Timer Section -->
+    <section class="py-12 px-6 mt-12">
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-xl text-center">
+        <h2 class="text-2xl font-serif text-center mb-6">До нашей свадьбы осталось</h2>
+        <div class="flex justify-center gap-4 text-3xl font-semibold text-pink-600">
+          <div class="text-center">
+            <div id="days" class="bg-pink-50 rounded-lg px-4 py-2 inline-block">0</div>
+            <div class="text-xs uppercase mt-1 text-gray-500">дней</div>
+          </div>
+          <div class="text-center">
+            <div id="hours" class="bg-pink-50 rounded-lg px-4 py-2 inline-block">00</div>
+            <div class="text-xs uppercase mt-1 text-gray-500">часов</div>
+          </div>
+          <div class="text-center">
+            <div id="minutes" class="bg-pink-50 rounded-lg px-4 py-2 inline-block">00</div>
+            <div class="text-xs uppercase mt-1 text-gray-500">минут</div>
+          </div>
+          <div class="text-center">
+            <div id="seconds" class="bg-pink-50 rounded-lg px-4 py-2 inline-block">00</div>
+            <div class="text-xs uppercase mt-1 text-gray-500">секунд</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Message -->
+    <section class="py-16 px-6 mt-12">
+      <div class="max-w-xl mx-auto text-center">
+        <p class="text-2xl md:text-3xl font-serif italic text-pink-700 leading-relaxed">До скорой встречи,</p>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-800 mt-2">Анастасия & Игорь</h2>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm text-gray-200 mt-12">
+      <p>© 2025 Анастасия & Игорь. Все права защищены.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    const weddingDate = new Date("2025-08-09T00:00:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24).padStart(2, '0');
+      const minutes = String(Math.floor((diff / (1000 * 60)) % 60).padStart(2, '0');
+      const seconds = String(Math.floor((diff / 1000) % 60).padStart(2, '0');
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    function togglePartner() {
+      const yes = document.querySelector('input[name="attendance"]:checked').value === "yes";
+      document.getElementById("partnerSection").classList.toggle("hidden", !yes);
+      document.getElementById("drinksSection").classList.toggle("hidden", !yes);
+    }
+
+    document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.classList.add("hidden");
+      document.getElementById("confirmationMessage").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
